@@ -1,4 +1,5 @@
 import styled from "styled-components";
+//import {Link} from "react-router-dom"; no styled button troca o .button por (LInk)
 
 const Button = styled.button`
     color: var(--white);
