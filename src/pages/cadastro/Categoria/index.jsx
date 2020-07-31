@@ -13,8 +13,10 @@ function CadastroCategoria() {
     const[categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
 
-    /*useEffect(() =>{
-      const URL = 'http://localhost:8080/categorias';
+    useEffect(() =>{
+      const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080'
+        : 'https://danielflix.herokuapp.com/categorias';
       fetch(URL)
       .then(async(respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -22,9 +24,11 @@ function CadastroCategoria() {
           ...resposta,
         ]);
       });
-    });*/
+    });
 
-    useEffect(() => {
+
+
+   /* useEffect(() => {
       if(window.location.href.includes('localhost')) {
         const URL = 'http://localhost:8080/categorias'; 
         fetch(URL)
@@ -37,7 +41,7 @@ function CadastroCategoria() {
           throw new Error('Não foi possível pegar os dados');
         })
       }    
-    }, []);
+    }, []);*/
 
     function setValue (chave, valor){
       setValues({
