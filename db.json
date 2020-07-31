@@ -1,0 +1,16 @@
+{
+    "categorias": [{
+            "id": 1,
+            "nome": "Front End",
+            "descricao": "Meu Deus meu tudo",
+            "cor": "#cbd1ff"
+        },
+        {
+            "id": 2,
+            "nome": "Back End",
+            "descricao": "Meu Deus meu tudo",
+            "cor": "#cbd1ff"
+        }
+
+    ]
+}
