@@ -4,6 +4,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
 import Button from '../../../components/Button';
+import videosRepository from '../../../repositories/videos';
 
 function CadastroVideo() {
     const history = useHistory();
@@ -19,9 +20,16 @@ function CadastroVideo() {
 
     <form onSubmit={(event)=>{
         event.preventDefault();
-        alert('Video Cadastrado com sucesso!!1!');
 
+        videosRepository.create({
+            titulo: values.titulo,
+            url: values.url,
+            categoriaId: 1,
+        })
+        .then(()=>{
+        console.log('Cadastrou com sucesso!');
         history.push('/');
+        });
     }}
     >
 
