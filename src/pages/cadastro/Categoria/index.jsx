@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
     const valoresIniciais = {
@@ -10,14 +11,14 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   }
+    const {handleChange, values, clearForm}= useForm(valoresIniciais);
     const[categorias, setCategorias] = useState([]);
-    const [values, setValues] = useState(valoresIniciais);
 
     useEffect(() =>{
-      const URL = window.location.hostname.includes('localhost')
+      const URL_BACKEND = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080'
         : 'https://danielflix.herokuapp.com/categorias';
-      fetch(URL)
+      fetch(URL_BACKEND)
       .then(async(respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
@@ -25,37 +26,6 @@ function CadastroCategoria() {
         ]);
       });
     });
-
-
-
-   /* useEffect(() => {
-      if(window.location.href.includes('localhost')) {
-        const URL = 'http://localhost:8080/categorias'; 
-        fetch(URL)
-        .then(async (respostaDoServer) =>{
-          if(respostaDoServer.ok) {
-            const resposta = await respostaDoServer.json();
-            setCategorias(resposta);
-            return; 
-          }
-          throw new Error('Não foi possível pegar os dados');
-        })
-      }    
-    }, []);*/
-
-    function setValue (chave, valor){
-      setValues({
-        ...values,
-        [chave]: valor, //nome: 'valor'
-      })
-    }
-
-    function handleChange(infosDoEvento){
-      setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value 
-      );
-    }
 
     return ( 
         <PageDefault>
@@ -69,20 +39,20 @@ function CadastroCategoria() {
             values
           ]);
 
-          setValues(valoresIniciais)
+          clearForm();
         }}>
 
-        <FormField 
+        {/*<FormField 
         label="Nome da Categoria"
         type="textarea"
         name="nome"
         value={values.nome}
         onChange={handleChange}
-        />
+        />*/}
         
           <FormField 
-        label="Descrição: "
-        type="string"
+        label="Descrição"
+        type="textarea"
         name="descricao"
         value={values.descricao}
         onChange={handleChange}
