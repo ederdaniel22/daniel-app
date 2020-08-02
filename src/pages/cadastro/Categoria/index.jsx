@@ -16,7 +16,7 @@ function CadastroCategoria() {
 
     useEffect(() =>{
       const URL_BACKEND = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080'
+      ? 'http://localhost:8080/categorias'
         : 'https://danielflix.herokuapp.com/categorias';
       fetch(URL_BACKEND)
       .then(async(respostaDoServidor) => {
@@ -33,8 +33,7 @@ function CadastroCategoria() {
 
         <form onSubmit={function handleSubmit(infosDoEvento){
           infosDoEvento.preventDefault();
-          
-          setCategorias([
+            setCategorias([
             ...categorias,
             values
           ]);
@@ -42,15 +41,15 @@ function CadastroCategoria() {
           clearForm();
         }}>
 
-        {/*<FormField 
-        label="Nome da Categoria"
-        type="textarea"
-        name="nome"
-        value={values.nome}
-        onChange={handleChange}
-        />*/}
-        
-          <FormField 
+        <FormField
+          label="Nome da Categoria"
+          name="nome"
+          value={values.nome}
+          onChange={handleChange}
+        />
+
+
+        <FormField 
         label="Descrição"
         type="textarea"
         name="descricao"
