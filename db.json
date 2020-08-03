@@ -184,24 +184,7 @@
             "categoriaId": 5,
             "titulo": "Resident Evil 8",
             "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-        },
-        {
-            "titulo": "Vídeo padrão",
-            "url": "https://github.com/daniel22",
-            "categoriaId": 1,
-            "id": 25
-        },
-        {
-            "titulo": "Vídeo padrão",
-            "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
-            "categoriaId": 1,
-            "id": 29
-        },
-        {
-            "titulo": "Vídeo padrão",
-            "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
-            "categoriaId": 1,
-            "id": 30
         }
+
     ]
 }
