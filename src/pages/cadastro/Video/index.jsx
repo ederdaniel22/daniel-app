@@ -51,19 +51,20 @@ function CadastroVideo() {
     }}
     >
 
-    <FormField 
+        <FormField 
         label="Titulo do Vídeo"
         name="titulo"
         value={values.titulo}
         onChange={handleChange}
         />
 
-    <FormField 
+        <FormField 
         label="URL"
         name="url"
         value={values.url}
         onChange={handleChange}
         />
+
         <FormField 
         label="Categoria"
         name="categoria"
@@ -75,7 +76,7 @@ function CadastroVideo() {
         <Button type="submit">
         Cadastrar
         </Button>
-    </form>
+        </form>
     
         <Link to="/cadastro/categoria">
             Cadastrar Categoria

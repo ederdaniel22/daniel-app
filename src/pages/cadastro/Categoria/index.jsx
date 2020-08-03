@@ -17,7 +17,7 @@ function CadastroCategoria() {
     useEffect(() =>{
       const URL_BACKEND = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
-        : 'https://danielflix.herokuapp.com/categorias';
+      : 'https://danielflix.herokuapp.com/categorias';
       fetch(URL_BACKEND)
       .then(async(respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
