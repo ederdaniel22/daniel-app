@@ -7,7 +7,7 @@ import categoriasRepository from '../../repositories/categorias';
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
         setDadosIniciais(categoriasComVideos)
