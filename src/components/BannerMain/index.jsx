@@ -21,7 +21,7 @@ export default function BannerMain({
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
-        <ContentAreaContainer.Item>
+        <ContentAreaContainer.Item data-aos="fade-up">
           <ContentAreaContainer.Title>
             {videoTitle}
           </ContentAreaContainer.Title>
@@ -29,13 +29,13 @@ export default function BannerMain({
           <ContentAreaContainer.Description>
             {videoDescription}
           </ContentAreaContainer.Description>
-        </ContentAreaContainer.Item>
+        </ContentAreaContainer.Item >
 
-        <ContentAreaContainer.Item>
+        <ContentAreaContainer.Item data-aos="fade-up">
           <VideoIframeResponsive
             youtubeID={youTubeID}
           />
-          <WatchButton>
+          <WatchButton as="a" href={url} target="_blank">
             Assistir
           </WatchButton>
         </ContentAreaContainer.Item>
