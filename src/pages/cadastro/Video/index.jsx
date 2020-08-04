@@ -73,7 +73,7 @@ function CadastroVideo() {
         suggestions={categoryTitles}
         />
         
-        <Button as="a" href="https://www.youtube.com/watch?time_continue=16&v=c8mVlakBESE&feature=emb_logo" type="submit">
+        <Button as="a" href="https://youtu.be/c8mVlakBESE" type="submit">
         Cadastrar
         </Button>
         </form>
