@@ -107,7 +107,7 @@ export const WatchButton = styled.button `
   box-sizing: border-box;
   cursor: pointer;
   width: 30%;
-  padding: 4px 6px;
+  padding: 16px 24px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -122,8 +122,6 @@ export const WatchButton = styled.button `
   transition: opacity .3s;
   display: none;
   margin: 0 auto;
-  text-align: center;
-  justify-content: center;
   @media (max-width: 800px) {
     display: block;
   }
