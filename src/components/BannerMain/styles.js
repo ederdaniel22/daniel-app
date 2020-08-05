@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContentAreaContainer = styled.section`
+export const ContentAreaContainer = styled.section `
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
@@ -15,7 +15,7 @@ export const ContentAreaContainer = styled.section`
   }
 `;
 
-ContentAreaContainer.Item = styled.div`
+ContentAreaContainer.Item = styled.div `
   width: 50%;
   display: inline-block;
   margin-bottom: 50px;
@@ -24,7 +24,7 @@ ContentAreaContainer.Item = styled.div`
   }
 `;
 
-ContentAreaContainer.Category = styled.h1`
+ContentAreaContainer.Category = styled.h1 `
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -45,13 +45,13 @@ ContentAreaContainer.Category = styled.h1`
   }
 `;
 
-ContentAreaContainer.Description = styled.p`
+ContentAreaContainer.Description = styled.p `
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-ContentAreaContainer.Title = styled.h2`
+ContentAreaContainer.Title = styled.h2 `
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -65,11 +65,13 @@ ContentAreaContainer.Title = styled.h2`
   }
 `;
 
-export const BannerMainContainer = styled.section`
+export const BannerMainContainer = styled.section `
   height: 80vh;
   position: relative;
   color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  background-image: ${({ backgroundImage }) => `
+url($ { backgroundImage })
+`}; 
   background-size: cover;
   background-position: center;
   @media (max-width: 800px) {
@@ -100,11 +102,12 @@ export const BannerMainContainer = styled.section`
   }
 `;
 
-export const WatchButton = styled.button`
+export const WatchButton = styled.button `
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 24px;
+  width: 30%;
+  padding: 4px 6px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -119,6 +122,8 @@ export const WatchButton = styled.button`
   transition: opacity .3s;
   display: none;
   margin: 0 auto;
+  text-align: center;
+  justify-content: center;
   @media (max-width: 800px) {
     display: block;
   }
